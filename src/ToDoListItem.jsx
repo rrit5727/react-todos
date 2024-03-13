@@ -1,11 +1,18 @@
 //
-
+import "./ToDoListItem.css";
 
 //
-const ToDoListItem = () => {
+const ToDoListItem = ( {todo, index} ) => {
     return (
-        <li>To Do Item</li>        
-    )
+        <li className="ToDoListItem"
+        style={{
+            backgroundColor: index % 2 ? "lavender" : "plum"
+          }}
+        >
+            <div className="flex-ctr-ctr">{index}</div>            
+            { todo }
+            </li>        
+    ) 
 }
 
 export default ToDoListItem
